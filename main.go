@@ -1,12 +1,11 @@
 package main
 
 import (
-	"Spidy/crawler"
 	"flag"
 	"fmt"
 	"os"
 
-	"github.com/pkg/profile"
+	"github.com/superiss/spidy/crawler"
 )
 
 const msg = `
@@ -24,13 +23,6 @@ func usage() {
 
 // main
 func main() {
-	defer profile.Start(profile.MemProfile, profile.ProfilePath("."), profile.NoShutdownHook).Stop()
-	// go func() {
-	// 	p := profile.Start(profile.MemProfile, profile.ProfilePath("."), profile.NoShutdownHook)
-	// 	time.Sleep(30 * time.Minute)
-	// 	p.Stop()
-	// 	os.Exit(1)
-	// }()
 	// load configs
 	config := flag.String("config", "", "config: path to setting.yaml.")
 	flag.Usage = usage
