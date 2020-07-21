@@ -1,0 +1,10 @@
+Engine:
+  worker: 100
+  parallel: 10
+  depth: 10
+  urls: ./input/output.txt
+  proxies: []
+  #tlds: [com, net, io, co, ly, me, us, at, st, so]
+  tlds: []
+  random_delay: 5s
+  timeout: 30s
