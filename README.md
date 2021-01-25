@@ -1,9 +1,6 @@
 ## Spidy
 Spidy is a tool that crawl web pages from a given list of websites, it match all domains on each page and find expired domains among them.
 
-# Demo
-https://youtu.be/y40w2rxpXj8
-
 # Usage
 compile the package
 `
