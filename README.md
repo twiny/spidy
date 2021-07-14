@@ -77,3 +77,5 @@ main app setting:
 
   # Big Thanks
   Colly V2 => https://github.com/gocolly/colly
+
+[![Donate with Ethereum](https://en.cryptobadges.io/badge/small/0x94a003520Ad7F9aFF613c1cb6798a96256217EC9)](https://en.cryptobadges.io/donate/0x94a003520Ad7F9aFF613c1cb6798a96256217EC9)
