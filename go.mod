@@ -1,12 +1,11 @@
-module github.com/superiss/spidy
+module github.com/twiny/spidy
 
-go 1.14
+go 1.16
 
 require (
-	github.com/PuerkitoBio/goquery v1.5.1
+	github.com/PuerkitoBio/goquery v1.7.1
 	github.com/gocolly/colly/v2 v2.1.0
-	github.com/superiss/colorful v0.0.0-20200608152512-f8e4d206cee2
-	github.com/superiss/domain v0.0.0-20200705235949-a23bca9c08b9
-	golang.org/x/net v0.0.0-20200707034311-ab3426394381
-	gopkg.in/yaml.v2 v2.3.0
+	github.com/twiny/domain v0.0.0-20210823211749-c6132412abc4
+	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d
+	gopkg.in/yaml.v2 v2.4.0
 )

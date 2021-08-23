@@ -3,6 +3,7 @@ package crawler
 import (
 	"bufio"
 	"bytes"
+	"fmt"
 	"net"
 	"net/http"
 	"os"
@@ -15,8 +16,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 	"github.com/gocolly/colly/v2/proxy"
 
-	"github.com/superiss/colorful"
-	domainCheck "github.com/superiss/domain"
+	domainCheck "github.com/twiny/domain"
 )
 
 var (
@@ -52,7 +52,6 @@ type Spider struct {
 	responses chan []byte
 	//
 	writer *Writer
-	logger *colorful.Logger
 	err    chan *Error
 }
 
@@ -176,8 +175,7 @@ func NewSpider(setting *Setting) (*Spider, error) {
 			valids:  make(chan string, setting.Engine.Worker),
 		},
 		//
-		logger: colorful.New(),
-		err:    errs,
+		err: errs,
 	}, nil
 }
 
@@ -288,10 +286,10 @@ func (s *Spider) validate(domain string) {
 				}
 				switch valid {
 				case true:
-					s.logger.Success(valid, " ", rootDomain, "\n")
+					fmt.Println(valid, " ", rootDomain, "\n")
 					s.writer.valids <- rootDomain
 				case false:
-					s.logger.Error(valid, " ", rootDomain, "\n")
+					fmt.Println(valid, " ", rootDomain, "\n")
 				}
 			}
 		}
@@ -308,7 +306,7 @@ func (s *Spider) Run() {
 	// open file
 	input, err := os.Open(s.setting.Engine.URLPath)
 	if err != nil {
-		s.logger.Error("could not open URLs file")
+		fmt.Println("could not open URLs file")
 		return
 	}
 
@@ -320,7 +318,7 @@ func (s *Spider) Run() {
 			urls <- scanner.Text()
 		}
 		if err := scanner.Err(); err != nil {
-			s.logger.Error(err)
+			fmt.Println(err)
 		}
 		//
 		input.Close()

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/superiss/spidy/crawler"
+	"github.com/twiny/spidy/crawler"
 )
 
 const msg = `
