@@ -1,0 +1,19 @@
+crawler:
+    max_depth: 10
+    # filter: []
+    rate_limit: "1/5s"
+    max_body_size: "20MB"
+    user_agents:
+      - "Spidy/2.1; +https://github.com/twiny/spidy"
+    # proxies: []
+log:
+    rotate: 7
+    path: "./log"
+store:
+    ttl: "24h"
+    path: "./store"
+result:
+    path: ./result
+parralle: 3
+timeout: "5m"
+tlds: ["biz", "cc", "com", "edu", "info", "net", "org", "tv"]
