@@ -45,7 +45,7 @@ var defaultSetting = &Setting{
 			Interval: time.Second,
 		},
 		MaxBodySize: 10 * 1024 * 1024, // 10 MB
-		UserAgents:  []string{`Spidy v2 - Agent.`},
+		UserAgents:  []string{`Spidy/2.1; +https://github.com/twiny/spidy`},
 		Proxies:     []string{},
 	},
 	Log: struct {

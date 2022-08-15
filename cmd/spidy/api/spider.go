@@ -13,7 +13,6 @@ import (
 	"syscall"
 
 	//
-
 	"github.com/twiny/spidy/v2/internal/pkg/spider/v1"
 	"github.com/twiny/spidy/v2/internal/service/cache"
 	"github.com/twiny/spidy/v2/internal/service/writer"
