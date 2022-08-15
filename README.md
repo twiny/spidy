@@ -14,6 +14,28 @@ go build -o bin/spidy -v cmd/spidy/main.go
 ./bin/spidy -c config/config.yaml -u https://github.com
 ```
 
+## Usage
+
+```sh
+NAME:
+   Spidy - Domain name scraper
+
+USAGE:
+   spidy [global options] command [command options] [arguments...]
+
+VERSION:
+   2.0.0
+
+COMMANDS:
+   help, h  Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --config path, -c path  path to config file
+   --help, -h              show help (default: false)
+   --urls urls, -u urls    urls of page to scrape  (accepts multiple inputs)
+   --version, -v           print the version (default: false)
+```
+
 ## Configuration
 
 ```yaml
