@@ -10,14 +10,12 @@ import (
 	"github.com/twiny/spidy/v2/internal/pkg/spider/v1"
 )
 
-// CSVWriter
 type CSVWriter struct {
 	l *sync.Mutex
 	f *os.File
 	w *csv.Writer
 }
 
-// NewCSVWriter
 func NewCSVWriter(dir string) (*CSVWriter, error) {
 	if _, err := os.Stat(dir); os.IsNotExist(err) {
 		if err := os.MkdirAll(dir, 0755); err != nil {
@@ -41,7 +39,6 @@ func NewCSVWriter(dir string) (*CSVWriter, error) {
 	}, nil
 }
 
-// Write
 func (c *CSVWriter) Write(d *spider.Domain) error {
 	c.l.Lock()
 	defer func() {
@@ -52,7 +49,6 @@ func (c *CSVWriter) Write(d *spider.Domain) error {
 	return c.w.Write([]string{d.Name + "." + d.TLD, d.Status})
 }
 
-// Close
 func (c *CSVWriter) Close() error {
 	return c.f.Close()
 }

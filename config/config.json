@@ -1,0 +1,12 @@
+{
+    "worker": 5,
+    "max_depth": 10,
+    "filter": [],
+    "rate_limit": "10/s",
+    "max_body_size": "5mb",
+    "timeout": 60000000000,
+    "user_agents": [
+        "Spidy/2.1; +"
+    ],
+    "allowed_tlds": null
+}
